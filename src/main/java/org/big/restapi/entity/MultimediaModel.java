@@ -7,9 +7,10 @@ import lombok.ToString;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+
 /**
- *<p><b> Description 相关API</b></p>
- *<p> Description 相关API</p>
+ *<p><b> Multimedia 相关API</b></p>
+ *<p> Multimedia 相关API</p>
  * @author Bin
  * <p>Created date: 2022/06/24</p>
  * <p>Copyright: The Research Group of Biodiversity Informatics (BiodInfoGroup) - 中国科学院动物研究所生物多样性信息学研究组</p>
@@ -19,41 +20,77 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @ToString
-public class DescriptionModel implements Serializable {
+public class MultimediaModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@ApiModelProperty(value = "唯一标识UUID")
 	private String id;
-	
+
 	@ApiModelProperty(value = "物种拉丁名")
-	private String sciname;	
-	
+	private String sciname;
+
 	@ApiModelProperty(value = "物种中文名")
 	private String chname;
-	
+
 	@ApiModelProperty(value = "分类等级")
 	private String rank;
-	
-	@ApiModelProperty(value = "描述标题")
-	private String destitle;
 
-	@ApiModelProperty(value = "描述内容")
-	private String descontent;
+	@ApiModelProperty(value = "标题")
+	private String title;
 
-	@ApiModelProperty(value = "描述人")
-	private String describer;
+	@ApiModelProperty(value = "展示类型")
+	private String showtype;
 
-	@ApiModelProperty(value = "描述日期")
-	private String desdate;
+	@ApiModelProperty(value = "媒体类型")
+	private String mediatype;
 
-	@ApiModelProperty(value = "描述语言")
-	private String language;
+	@ApiModelProperty(value = "媒体标签")
+	private String medialabel;
+
+	@ApiModelProperty(value = "媒体信息")
+	private String mediainfo;
+
+	@ApiModelProperty(value = "国家")
+	private String country;
+
+	@ApiModelProperty(value = "省")
+	private String province;
+
+	@ApiModelProperty(value = "市")
+	private String city;
+
+	@ApiModelProperty(value = "县")
+	private String county;
+
+	@ApiModelProperty(value = "小地名")
+	private String locality;
+
+	@ApiModelProperty(value = "分布信息")
+	private String location;
+
+	@ApiModelProperty(value = "经度")
+	private Double lng;
+
+	@ApiModelProperty(value = "纬度")
+	private Double lat;
+
+	@ApiModelProperty(value = "存储路径")
+	private String path;
+
+	@ApiModelProperty(value = "原始路径")
+	private String originurl;
 
 	@ApiModelProperty(value = "版权信息")
 	private String copyright;
 
 	@ApiModelProperty(value = "权利所有人")
 	private String rightsholder;
+
+	@ApiModelProperty(value = "发布人")
+	private String announcer;
+
+	@ApiModelProperty(value = "贡献者")
+	private String contributor;
 
 	@ApiModelProperty(value = "共享协议")
 	private String licenseName;
@@ -70,11 +107,8 @@ public class DescriptionModel implements Serializable {
 	@ApiModelProperty(value = "参考文献")
 	private String referencejson;
 
-	@ApiModelProperty(value = "描述类型")
-	private String descriptiontypeName;
-
-	@ApiModelProperty(value = "描述类型ID")
-	private String descriptiontypeId;
+	@ApiModelProperty(value = "关联描述ID")
+	private String descriptionId;
 
 	@ApiModelProperty(value = "关联物种ID")
 	private String taxonId;
@@ -91,7 +125,7 @@ public class DescriptionModel implements Serializable {
 	@ApiModelProperty(value = "备注")
 	private String remark;
 
-	public DescriptionModel() {
+	public MultimediaModel() {
 		
 	}
 }

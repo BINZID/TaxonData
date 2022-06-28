@@ -7,9 +7,10 @@ import lombok.ToString;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+
 /**
- *<p><b> Description 相关API</b></p>
- *<p> Description 相关API</p>
+ *<p><b> Traitdata 相关API</b></p>
+ *<p> Traitdata 相关API</p>
  * @author Bin
  * <p>Created date: 2022/06/24</p>
  * <p>Copyright: The Research Group of Biodiversity Informatics (BiodInfoGroup) - 中国科学院动物研究所生物多样性信息学研究组</p>
@@ -19,47 +20,50 @@ import java.sql.Timestamp;
 @Getter
 @Setter
 @ToString
-public class DescriptionModel implements Serializable {
+public class TraitdataModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@ApiModelProperty(value = "唯一标识UUID")
 	private String id;
-	
+
 	@ApiModelProperty(value = "物种拉丁名")
-	private String sciname;	
-	
+	private String sciname;
+
 	@ApiModelProperty(value = "物种中文名")
 	private String chname;
-	
+
+	@ApiModelProperty(value = "种下拉丁名")
+	private String infrasp;
+
+	@ApiModelProperty(value = "种下中文名")
+	private String chinfrasp;
+
 	@ApiModelProperty(value = "分类等级")
 	private String rank;
-	
-	@ApiModelProperty(value = "描述标题")
-	private String destitle;
 
-	@ApiModelProperty(value = "描述内容")
-	private String descontent;
+	@ApiModelProperty(value = "性状名称")
+	private String traitontology;
 
-	@ApiModelProperty(value = "描述人")
-	private String describer;
+	@ApiModelProperty(value = "属性")
+	private String traitproperty;
 
-	@ApiModelProperty(value = "描述日期")
-	private String desdate;
+	@ApiModelProperty(value = "值")
+	private String traitvalue;
 
-	@ApiModelProperty(value = "描述语言")
-	private String language;
+	@ApiModelProperty(value = "测量单位")
+	private String traitunit;
 
-	@ApiModelProperty(value = "版权信息")
-	private String copyright;
+	@ApiModelProperty(value = "测量依据")
+	private String measurement;
 
-	@ApiModelProperty(value = "权利所有人")
-	private String rightsholder;
+	@ApiModelProperty(value = "标本采集地")
+	private String locality;
 
-	@ApiModelProperty(value = "共享协议")
-	private String licenseName;
+	@ApiModelProperty(value = "标本号")
+	private String specimenno;
 
-	@ApiModelProperty(value = "共享协议ID")
-	private String licenseId;
+	@ApiModelProperty(value = "类群")
+	private String taxongroups;
 
 	@ApiModelProperty(value = "数据源")
 	private String sourcesName;
@@ -91,7 +95,7 @@ public class DescriptionModel implements Serializable {
 	@ApiModelProperty(value = "备注")
 	private String remark;
 
-	public DescriptionModel() {
+	public TraitdataModel() {
 		
 	}
 }
