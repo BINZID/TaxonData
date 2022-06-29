@@ -1,16 +1,15 @@
 package org.big.restapi;
 
 import io.swagger.annotations.*;
-import org.big.restapi.entity.TraitdataModel;
+import org.big.common.result.BaseResults;
+import org.big.restapi.entity.MultimediaModel;
 import org.big.service.MultimediaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * <p><b>Multimedia 相关API方法</b></p>
@@ -23,34 +22,56 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/app/v1/multimedia")
-@Api(tags = "物种多媒体API列表", produces = "application/json, application/xml")
+@Api(tags = "多媒体API列表", produces = "application/json, application/xml")
 public class MultimediaRestController {
     @Autowired
     private MultimediaService multimediaService;
-
     /**
-     *<p><b>物种多媒体列表(API)</b></p>
-     *<p>物种多媒体列表(API)</p>
+     *<p><b> 根据关联物种Id查询相关多媒体(API) </b></p>
+     *<p> 根据关联物种Id查询相关多媒体(API) </p>
      * @author BIN
      * @version: 0.1
-     * @Date 2020/08/04
+     * @Date 2022/06/29
      * @return
      */
     @SuppressWarnings("rawtypes")
-    @ApiOperation(value = "物种多媒体列表", notes = "部分值必填")
+    @ApiOperation(value = "根据关联物种Id查询相关多媒体", notes = "部分值必填")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "apiKey", value = "api令牌", dataType = "String", required=true, paramType = "query"),
-            @ApiImplicitParam(name = "num", value = "每页数量", dataType = "String", required=true, paramType = "query", example = "10"),
-            @ApiImplicitParam(name = "page", value = "第几页", dataType = "String", required=true, paramType = "query", example = "1"),
-            @ApiImplicitParam(name = "type", value = "描述类型", dataType = "String", required=false, paramType = "query"),
-            @ApiImplicitParam(name = "search", value = "物种描述检索", dataType = "String", required=false, paramType = "query"),
+            /*@ApiImplicitParam(name = "num", value = "每页数量", dataType = "String", required=true, paramType = "query", example = "10"),
+            @ApiImplicitParam(name = "page", value = "第几页", dataType = "String", required=true, paramType = "query", example = "1"),*/
+            @ApiImplicitParam(name = "type", value = "媒体类型", dataType = "String", required=false, paramType = "query"),
+            @ApiImplicitParam(name = "taxonId", value = "关联物种Id", dataType = "String", required=false, paramType = "query"),
     })
     @ApiResponses({
-            @ApiResponse(code = 200,message = "OK", response = TraitdataModel.class),
+            @ApiResponse(code = 200,message = "OK", response = MultimediaModel.class),
     })
-    @GetMapping(value="/list")    public List<String> list(HttpServletRequest request) {
+    @PostMapping(value="/findListByTaxonId")    public BaseResults findListByTaxonId(HttpServletRequest request) {
+        return multimediaService.findListByTaxonId(request);
+    }
 
-        return Collections.singletonList("Xxx");
+    /**
+     *<p><b> 根据关联物种名称（拉丁名或中文名）查询相关多媒体(API) </b></p>
+     *<p> 根据关联物种（拉丁名或中文名）查询相关多媒体(API) </p>
+     * @author BIN
+     * @version: 0.1
+     * @Date 2022/06/29
+     * @return
+     */
+    @SuppressWarnings("rawtypes")
+    @ApiOperation(value = "根据关联物种名称查询相关多媒体", notes = "部分值必填")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "apiKey", value = "api令牌", dataType = "String", required=true, paramType = "query"),
+            /*@ApiImplicitParam(name = "num", value = "每页数量", dataType = "String", required=true, paramType = "query", example = "10"),
+            @ApiImplicitParam(name = "page", value = "第几页", dataType = "String", required=true, paramType = "query", example = "1"),*/
+            @ApiImplicitParam(name = "type", value = "媒体类型", dataType = "String", required=false, paramType = "query"),
+            @ApiImplicitParam(name = "name", value = "关联物种名称", dataType = "String", required=false, paramType = "query"),
+    })
+    @ApiResponses({
+            @ApiResponse(code = 200,message = "OK", response = MultimediaModel.class),
+    })
+    @PostMapping(value="/findListByName")    public BaseResults findListByName(HttpServletRequest request) {
+        return multimediaService.findListByName(request);
     }
 
 }

@@ -12,5 +12,6 @@ public interface TraitdataService {
      * @param request
      * @return
      */
-    BaseResults findListByInfo(HttpServletRequest request);
+
+    BaseResults findListByName(HttpServletRequest request);
 }

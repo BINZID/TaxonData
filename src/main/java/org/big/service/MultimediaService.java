@@ -12,5 +12,7 @@ public interface MultimediaService {
      * @param request
      * @return
      */
-    BaseResults findListByInfo(HttpServletRequest request);
+    BaseResults findListByTaxonId(HttpServletRequest request);
+
+    BaseResults findListByName(HttpServletRequest request);
 }
