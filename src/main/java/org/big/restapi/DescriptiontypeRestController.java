@@ -2,7 +2,7 @@ package org.big.restapi;
 
 import io.swagger.annotations.*;
 import org.big.common.result.BaseResults;
-import org.big.restapi.entity.DescriptionModel;
+import org.big.restapi.entity.DescriptiontypeModel;
 import org.big.service.DescriptiontypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,7 +44,7 @@ public class DescriptiontypeRestController {
             @ApiImplicitParam(name = "descterm", value = "描述类型名称", dataType = "String", required=false, paramType = "query"),
     })
     @ApiResponses({
-            @ApiResponse(code = 200,message = "OK", response = DescriptionModel.class),
+            @ApiResponse(code = 200,message = "OK", response = DescriptiontypeModel.class),
     })
     @PostMapping(value="/findListByName")    public BaseResults findListByTaxonId(HttpServletRequest request) {
         return descriptiontypeService.findListByName(request);

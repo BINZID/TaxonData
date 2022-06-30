@@ -2,7 +2,7 @@ package org.big.restapi;
 
 import io.swagger.annotations.*;
 import org.big.common.result.BaseResults;
-import org.big.restapi.entity.DescriptionModel;
+import org.big.restapi.entity.DatasourcesModel;
 import org.big.service.DatasourcesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,7 +44,7 @@ public class DatasourcesRestController {
             @ApiImplicitParam(name = "name", value = "数据源名称", dataType = "String", required=false, paramType = "query"),
     })
     @ApiResponses({
-            @ApiResponse(code = 200,message = "OK", response = DescriptionModel.class),
+            @ApiResponse(code = 200,message = "OK", response = DatasourcesModel.class),
     })
     @PostMapping(value="/findListByName")    public BaseResults findListByName(HttpServletRequest request) {
         return datasourcesService.findListByName(request);
