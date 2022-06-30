@@ -40,7 +40,7 @@ public class MultimediaRestController {
             @ApiImplicitParam(name = "apiKey", value = "api令牌", dataType = "String", required=true, paramType = "query"),
             /*@ApiImplicitParam(name = "num", value = "每页数量", dataType = "String", required=true, paramType = "query", example = "10"),
             @ApiImplicitParam(name = "page", value = "第几页", dataType = "String", required=true, paramType = "query", example = "1"),*/
-            @ApiImplicitParam(name = "type", value = "媒体类型", dataType = "String", required=false, paramType = "query"),
+            @ApiImplicitParam(name = "mediaType", value = "媒体类型", dataType = "String", required=false, paramType = "query"),
             @ApiImplicitParam(name = "taxonId", value = "关联物种Id", dataType = "String", required=false, paramType = "query"),
     })
     @ApiResponses({
