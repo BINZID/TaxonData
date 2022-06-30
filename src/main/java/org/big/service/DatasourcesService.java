@@ -14,6 +14,13 @@ import javax.servlet.http.HttpServletRequest;
  * @since JDK 1.80_144
  */
 public interface DatasourcesService {
-
+    /**
+     *<p><b> 数据源列表查询(API) </b></p>
+     *<p> 数据源列表查询(API) </p>
+     * @author BIN
+     * @version: 0.1
+     * @Date 2022/06/29
+     * @return
+     */
     BaseResults findListByName(HttpServletRequest request);
 }

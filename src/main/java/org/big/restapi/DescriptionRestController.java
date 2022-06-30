@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 /**
  * <p><b>Description 相关API方法</b></p>
@@ -42,7 +41,7 @@ public class DescriptionRestController {
             @ApiImplicitParam(name = "apiKey", value = "api令牌", dataType = "String", required=true, paramType = "query"),
             /*@ApiImplicitParam(name = "num", value = "每页数量", dataType = "String", required=true, paramType = "query", example = "10"),
             @ApiImplicitParam(name = "page", value = "第几页", dataType = "String", required=true, paramType = "query", example = "1"),*/
-            @ApiImplicitParam(name = "type", value = "描述类型", dataType = "String", required=false, paramType = "query"),
+            @ApiImplicitParam(name = "descriptionType", value = "描述类型", dataType = "String", required=false, paramType = "query"),
             @ApiImplicitParam(name = "taxonId", value = "关联物种Id", dataType = "String", required=false, paramType = "query"),
     })
     @ApiResponses({
