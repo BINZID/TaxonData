@@ -44,7 +44,7 @@ spring:
     # 显示请求头
     ui-config.show-request-headers: true
     # 取消使用默认预定义的响应消息,并使用自定义响应消息
-      apply-default-response-messages: false
+    apply-default-response-messages: false
     global-response-message.post[0]:
       code: 200
       message: OK
