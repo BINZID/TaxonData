@@ -23,7 +23,7 @@ public class TraitdataServiceImpl implements TraitdataService {
     private TraitdataRepository traitdataRepository;
 
     @Override
-    public BaseResults findListByName(HttpServletRequest request) {
+    public BaseResults findTraitListByName(HttpServletRequest request) {
         return null;
     }
 }

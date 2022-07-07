@@ -47,8 +47,8 @@ public class DescriptionRestController {
     @ApiResponses({
             @ApiResponse(code = 200,message = "OK", response = DescriptionModel.class),
     })
-    @PostMapping(value="/findListByTaxonId")    public BaseResults findListByTaxonId(HttpServletRequest request) {
-        return descriptionService.findListByTaxonId(request);
+    @PostMapping(value="/findDescListByTaxonId")    public BaseResults findListByTaxonId(HttpServletRequest request) {
+        return descriptionService.findDescListByTaxonId(request);
     }
 
     /**
@@ -71,7 +71,7 @@ public class DescriptionRestController {
     @ApiResponses({
             @ApiResponse(code = 200,message = "OK", response = DescriptionModel.class),
     })
-    @PostMapping(value="/findListByName")    public BaseResults findListByName(HttpServletRequest request) {
-        return descriptionService.findListByName(request);
+    @PostMapping(value="/findDescListByName")    public BaseResults findListByName(HttpServletRequest request) {
+        return descriptionService.findDescListByName(request);
     }
 }

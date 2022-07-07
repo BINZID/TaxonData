@@ -5,6 +5,7 @@ import org.big.common.result.BaseResults;
 import javax.servlet.http.HttpServletRequest;
 
 public interface DescriptionService {
+
     /**
      *<p><b> 根据关联物种Id查询相关描述(API) </b></p>
      *<p> 根据关联物种Id查询相关描述(API) </p>
@@ -13,7 +14,7 @@ public interface DescriptionService {
      * @Date 2022/06/29
      * @return
      */
-    BaseResults findListByTaxonId(HttpServletRequest request);
+    BaseResults findDescListByTaxonId(HttpServletRequest request);
 
     /**
      *<p><b> 根据关联物种名称（拉丁名或中文名）查询相关描述(API) </b></p>
@@ -23,5 +24,5 @@ public interface DescriptionService {
      * @Date 2022/06/29
      * @return
      */
-    BaseResults findListByName(HttpServletRequest request);
+    BaseResults findDescListByName(HttpServletRequest request);
 }

@@ -23,12 +23,12 @@ public class MultimediaServiceImpl implements MultimediaService {
     private MultimediaRepository multimediaRepository;
 
     @Override
-    public BaseResults findListByTaxonId(HttpServletRequest request) {
+    public BaseResults findMediaListByTaxonId(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    public BaseResults findListByName(HttpServletRequest request) {
+    public BaseResults findMediaListByName(HttpServletRequest request) {
         return null;
     }
 }

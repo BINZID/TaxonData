@@ -13,5 +13,5 @@ public interface TraitdataService {
      * @Date 2022/06/29
      * @return
      */
-    BaseResults findListByName(HttpServletRequest request);
+    BaseResults findTraitListByName(HttpServletRequest request);
 }

@@ -46,7 +46,7 @@ public class TraitdataRestController {
     @ApiResponses({
             @ApiResponse(code = 200,message = "OK", response = TraitdataModel.class),
     })
-    @PostMapping(value="/findListByName")    public BaseResults findListByName(HttpServletRequest request) {
-        return traitdataService.findListByName(request);
+    @PostMapping(value="/findTraitListByName")    public BaseResults findListByName(HttpServletRequest request) {
+        return traitdataService.findTraitListByName(request);
     }
 }

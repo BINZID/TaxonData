@@ -46,8 +46,8 @@ public class MultimediaRestController {
     @ApiResponses({
             @ApiResponse(code = 200,message = "OK", response = MultimediaModel.class),
     })
-    @PostMapping(value="/findListByTaxonId")    public BaseResults findListByTaxonId(HttpServletRequest request) {
-        return multimediaService.findListByTaxonId(request);
+    @PostMapping(value="/findMediaListByTaxonId")    public BaseResults findListByTaxonId(HttpServletRequest request) {
+        return multimediaService.findMediaListByTaxonId(request);
     }
 
     /**
@@ -70,8 +70,8 @@ public class MultimediaRestController {
     @ApiResponses({
             @ApiResponse(code = 200,message = "OK", response = MultimediaModel.class),
     })
-    @PostMapping(value="/findListByName")    public BaseResults findListByName(HttpServletRequest request) {
-        return multimediaService.findListByName(request);
+    @PostMapping(value="/findMediaListByName")    public BaseResults findListByName(HttpServletRequest request) {
+        return multimediaService.findMediaListByName(request);
     }
 
 }

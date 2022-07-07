@@ -9,7 +9,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Timestamp;
 
 @Entity
 @Getter
@@ -29,10 +28,11 @@ public class Refs {
     private String pyear;
     @Column(name = "title")
     private String title;
-    @Column(name = "reftype")
-    private String reftype;
     @Column(name = "journal")
     private String journal;
+
+    /*@Column(name = "reftype")
+    private String reftype;
     @Column(name = "language")
     private String language;
     @Column(name = "orignlang")
@@ -68,5 +68,5 @@ public class Refs {
     @Column(name = "synchdate")
     private Timestamp synchdate;
     @Column(name = "remark")
-    private String remark;
+    private String remark;*/
 }

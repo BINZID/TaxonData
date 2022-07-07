@@ -13,7 +13,7 @@ public interface MultimediaService {
      * @Date 2022/06/29
      * @return
      */
-    BaseResults findListByTaxonId(HttpServletRequest request);
+    BaseResults findMediaListByTaxonId(HttpServletRequest request);
 
     /**
      *<p><b> 根据关联物种名称（拉丁名或中文名）查询相关多媒体 </b></p>
@@ -23,5 +23,5 @@ public interface MultimediaService {
      * @Date 2022/06/29
      * @return
      */
-    BaseResults findListByName(HttpServletRequest request);
+    BaseResults findMediaListByName(HttpServletRequest request);
 }

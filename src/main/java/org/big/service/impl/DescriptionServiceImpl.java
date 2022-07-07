@@ -23,12 +23,12 @@ public class DescriptionServiceImpl implements DescriptionService {
     private DescriptionRepository descriptionRepository;
 
     @Override
-    public BaseResults findListByTaxonId(HttpServletRequest request) {
+    public BaseResults findDescListByTaxonId(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    public BaseResults findListByName(HttpServletRequest request) {
+    public BaseResults findDescListByName(HttpServletRequest request) {
         return null;
     }
 }
