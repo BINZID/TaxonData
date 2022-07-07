@@ -22,8 +22,16 @@ public class Description {
     private String sciname;
     @Column(name = "chname")
     private String chname;
-    @Column(name = "rank")
-    private String rank;
+    @Column(name = "authorship")
+    private String authorship;
+    @Column(name = "ranken")
+    private String rankEn;
+    @Column(name = "rankcn")
+    private String rankCn;
+    @Column(name = "ordernum")
+    private Integer orderNum;
+    @Column(name = "score")
+    private Integer score;
     @Column(name = "destitle")
     private String destitle;
     @Column(name = "descontent")

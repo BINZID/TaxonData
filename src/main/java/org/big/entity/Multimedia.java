@@ -25,8 +25,12 @@ public class Multimedia {
     private String sciname;
     @Column(name = "chname")
     private String chname;
-    @Column(name = "rank")
-    private String rank;
+    @Column(name = "authorship")
+    private String authorship;
+    @Column(name = "ranken")
+    private String rankEn;
+    @Column(name = "rankcn")
+    private String rankCn;
     @Column(name = "title")
     private String title;
     @Column(name = "showtype")
