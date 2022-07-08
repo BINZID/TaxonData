@@ -34,11 +34,11 @@ public class Multimedia {
     @Column(name = "title")
     private String title;
     @Column(name = "showtype")
-    private String showtype;
+    private String showType;
     @Column(name = "mediatype")
-    private String mediatype;
+    private String mediaType;
     @Column(name = "medialabel")
-    private String medialabel;
+    private String mediaLabel;
     @Column(name = "mediainfo")
     private String mediainfo;
     @Column(name = "country")
@@ -70,13 +70,13 @@ public class Multimedia {
     @Column(name = "contributor")
     private String contributor;
     @Column(name = "sources_name")
-    private String sourcesName;
+    private String sourceName;
     @Column(name = "license_id")
     private String licenseId;
     @Column(name = "license_name")
     private String licenseName;
     @Column(name = "sources_id")
-    private String sourcesId;
+    private String sourceId;
     @Column(name = "description_id")
     private String descriptionId;
     @Column(name = "referencejson")

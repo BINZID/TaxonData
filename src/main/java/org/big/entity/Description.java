@@ -51,9 +51,9 @@ public class Description {
     @Column(name = "license_id")
     private String licenseId;
     @Column(name = "sources_name")
-    private String sourcesName;
+    private String sourceName;
     @Column(name = "sources_id")
-    private String sourcesId;
+    private String sourceId;
     @Column(name = "referencejson")
     private String referencejson;
     @Column(name = "descriptiontype_name")

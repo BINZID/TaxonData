@@ -90,10 +90,10 @@ public class SaveServiceImpl implements SaveService {
                     multimedia.setAuthorship(authorship);
                     multimedia.setRankEn(ranken);
                     multimedia.setRankCn(rankcn);
-                    if (!StringUtils.isEmpty(multimedia.getShowtype())){
-                        multimedia.setShowtype("0");
-                        if ("macaulaylibrary".equals(multimedia.getSourcesId())){
-                            multimedia.setShowtype("1");
+                    if (!StringUtils.isEmpty(multimedia.getShowType())){
+                        multimedia.setShowType("0");
+                        if ("macaulaylibrary".equals(multimedia.getSourceId())){
+                            multimedia.setShowType("1");
                         }
                     }
                     multimediaRepository.save(multimedia);
