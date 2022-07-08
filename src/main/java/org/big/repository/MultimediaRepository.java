@@ -1,5 +1,6 @@
 package org.big.repository;
 
+import org.big.entity.Multimedia;
 import org.big.entity.Traitdata;
 import org.big.repository.base.BaseRepository;
 import org.springframework.stereotype.Repository;
@@ -14,6 +15,6 @@ import org.springframework.stereotype.Repository;
  * @since JDK 1.80_144
  */
 @Repository
-public interface MultimediaRepository extends BaseRepository<Traitdata, String> {
+public interface MultimediaRepository extends BaseRepository<Multimedia, String> {
     
 }
