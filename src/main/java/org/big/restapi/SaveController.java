@@ -28,6 +28,7 @@ public class SaveController {
 
     @PostMapping("/data")
     public String saveData(@RequestParam("data") String data){
+        System.out.println(data);
         BaseResults baseResults = saveService.saveData(data);
         return JSON.toJSONString(baseResults);
     }

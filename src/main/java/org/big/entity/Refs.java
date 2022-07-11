@@ -24,8 +24,8 @@ public class Refs {
     private String refstr;
     @Column(name = "author")
     private String author;
-    @Column(name = "pyear")
-    private String pyear;
+    @Column(name = "year")
+    private String year;
     @Column(name = "title")
     private String title;
     @Column(name = "journal")
