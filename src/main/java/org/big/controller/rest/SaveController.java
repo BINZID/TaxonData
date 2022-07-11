@@ -1,4 +1,4 @@
-package org.big.restapi;
+package org.big.controller.rest;
 
 import com.alibaba.fastjson.JSON;
 import org.big.common.result.BaseResults;
@@ -28,7 +28,6 @@ public class SaveController {
 
     @PostMapping("/data")
     public String saveData(@RequestParam("data") String data){
-        System.out.println(data);
         BaseResults baseResults = saveService.saveData(data);
         return JSON.toJSONString(baseResults);
     }
