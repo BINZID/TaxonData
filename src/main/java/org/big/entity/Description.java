@@ -50,9 +50,9 @@ public class Description {
     private String licenseName;
     @Column(name = "license_id")
     private String licenseId;
-    @Column(name = "sources_name")
+    @Column(name = "source_name")
     private String sourceName;
-    @Column(name = "sources_id")
+    @Column(name = "source_id")
     private String sourceId;
     @Column(name = "referencejson")
     private String referencejson;

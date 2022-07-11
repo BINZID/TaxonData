@@ -25,16 +25,16 @@ public class Traitdata {
     private String sciname;
     @Column(name = "chname")
     private String chname;
-    /*    @Column(name = "authorship")
-        private String authorship;*/
+    @Column(name = "authorship")
+    private String authorship;
     @Column(name = "infrasp")
     private String infrasp;
     @Column(name = "chinfrasp")
     private String chinfrasp;
-    /*    @Column(name = "ranken")
-        private String rankEn;
-        @Column(name = "rankcn")
-        private String rankCn;*/
+    @Column(name = "ranken")
+    private String rankEn;
+    @Column(name = "rankcn")
+    private String rankCn;
     @Column(name = "traitontology")
     private String traitontology;
     @Column(name = "traitproperty")
@@ -51,12 +51,12 @@ public class Traitdata {
     private String specimenno;
     @Column(name = "taxongroups")
     private String taxongroups;
-    @Column(name = "sources_name")
-    private String sourcesName;
-    /*    @Column(name = "sources_id")
-        private String sourcesId;*/
-/*    @Column(name = "referencejson")
-    private String referencejson;*/
+    @Column(name = "source_name")
+    private String sourceName;
+    @Column(name = "source_id")
+    private String sourceId;
+    @Column(name = "referencejson")
+    private String referencejson;
     @Column(name = "taxon_id")
     private String taxonId;
     @Column(name = "dbase_id")

@@ -69,13 +69,13 @@ public class Multimedia {
     private String announcer;
     @Column(name = "contributor")
     private String contributor;
-    @Column(name = "sources_name")
+    @Column(name = "source_name")
     private String sourceName;
     @Column(name = "license_id")
     private String licenseId;
     @Column(name = "license_name")
     private String licenseName;
-    @Column(name = "sources_id")
+    @Column(name = "source_id")
     private String sourceId;
     @Column(name = "description_id")
     private String descriptionId;

@@ -3,7 +3,20 @@ server:
   servlet.session.timeout: 7200
   tomcat:
     uri-encoding: UTF-8
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 10.0.0.113
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@10.0.0.113:8700/eureka/
+
+
 spring:
+  application:
+    name: desc-save
   datasource:
     url: jdbc:mysql://localhost:3306/desc_trait_media
     username: root
