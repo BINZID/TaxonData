@@ -53,7 +53,6 @@ public class SaveServiceImpl implements SaveService {
 
             JSONObject json = JSON.parseObject(data);
             JSONObject taxon = json.getJSONObject("taxon");
-
             // 拉丁名
             String sciname = taxon.getString("sciname");
             // 中文名
@@ -81,7 +80,7 @@ public class SaveServiceImpl implements SaveService {
 
 
             //   多媒体信息
-            JSONArray multmediaList = json.getJSONArray("multmediaList");
+            JSONArray multmediaList = json.getJSONArray("multimediaList");
             if (!CollectionUtils.isEmpty(multmediaList)){
                 for (Object o : multmediaList) {
                     Multimedia multimedia = JSON.parseObject(o.toString(), Multimedia.class);
@@ -102,7 +101,7 @@ public class SaveServiceImpl implements SaveService {
 
 
             //   文献信息
-            JSONArray refsList = json.getJSONArray("refsList");
+            JSONArray refsList = json.getJSONArray("refs");
             if (!CollectionUtils.isEmpty(refsList)){
                 for (Object o : refsList) {
                     Refs refs = JSON.parseObject(o.toString(), Refs.class);
